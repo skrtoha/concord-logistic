@@ -1,14 +1,9 @@
 <?php
 
-use app\models\Clients;
-use app\models\Onhandclist;
-use app\widgets\Alert;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use app\assets\MyClassAsset;
+use app\models\UrlContent;
 
 MyClassAsset::register($this);
 
@@ -332,6 +327,101 @@ MyClassAsset::register($this);
 
 <?= $content ?>
 
+<?
+$url = str_replace(['&edit=1', '?edit=1'], '', $_SERVER['REQUEST_URI']);
+$urlcontentObject = UrlContent::findOne(['url' => $url, 'website' => 2]);
+if (!$urlcontentObject){
+    $urlcontentObject = new UrlContent();
+    $urlcontentObject->url = $url;
+}
+$isAvailableEdit = Yii::$app->user->id == 45795 &&
+    isset($_GET['edit']) &&
+    $_GET['edit'] == 1;
+if ($isAvailableEdit){?>
+    <script src="/js/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript">
+        tinymce.init({
+            language: "ru",
+            selector: '.textarea_content',
+            height: 300,
+            theme: 'modern',
+            plugins: [
+                'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen',
+                'insertdatetime media nonbreaking save table contextmenu directionality',
+                'emoticons template paste textcolor colorpicker textpattern imagetools codesample'
+            ],
+            toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            toolbar2: 'print preview media | forecolor backcolor emoticons | codesample',
+            image_advtab: true,
+            templates: [
+                { title: 'Test template 1', content: 'Test 1' },
+                { title: 'Test template 2', content: 'Test 2' }
+            ],
+            content_css: [
+                '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+                '//www.tinymce.com/css/codepen.min.css'
+            ]
+        });
+    </script>
+    <div class="content">
+        <section class="container">
+            <div class="row">
+                <div class="text-form">
+                    <?php $form = ActiveForm::begin(['action' => '/site/urlcontent']); ?>
+                    <?=$form->field($urlcontentObject, 'url')->hiddenInput();?>
+                    <?=$form->field($urlcontentObject, 'before_content')->textarea(['class' => 'textarea_content'])?>
+                    <?=$form->field($urlcontentObject, 'content')->textarea(['class' => 'textarea_content'])?>
+                    <?=$form->field($urlcontentObject, 'after_content')->textarea(['class' => 'textarea_content'])?>
+                    <div class="form-group">
+                        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
+                    </div>
+                    <?php ActiveForm::end(); ?>
+                    <a href="<?=$_SERVER['HTTP_REFERER']?>">Отменить</a>
+                </div>
+            </div>
+        </section>
+    </div>
+<?}
+else{
+if ($urlcontentObject->content || $urlcontentObject->before_content || $urlcontentObject->after_content){?>
+    <div class="content">
+        <section class="container">
+            <div class="row">
+                <div id="url_content_wrap">
+                    <?if ($urlcontentObject->before_content){?>
+                        <?=$urlcontentObject->before_content?>
+                    <?}?>
+                    <?if ($urlcontentObject->content){?>
+                        <div id="url_content">
+                            <?=$urlcontentObject->content?>
+                        </div>
+                        <a href="#" id="showUrlContent">Показать</a>
+                    <?}?>
+                    <?if ($urlcontentObject->after_content){?>
+                        <?=$urlcontentObject->after_content?>
+                    <?}?>
+
+                </div>
+            </div>
+        </section>
+    </div>
+<?}?>
+<?if (Yii::$app->user->id == 45795){
+$href = $_SERVER['REQUEST_URI'];
+if (preg_match('/\?/', $href)) $href .= '&edit=1';
+else $href .= '?edit=1';
+?>
+    <a id="editTags" href="<?=$href?>">Edit tags</a>
+<?}?>
+    <script>
+        $('#showUrlContent').on('click', function(e){
+            e.preventDefault();
+            const $th = $(this);
+            $th.prev().toggleClass('active_1');
+        })
+    </script>
+<?}?>
 
 <footer id="newsletter">
     <div class="container">

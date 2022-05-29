@@ -1844,6 +1844,51 @@ li.gray-list span{
         float: left;
     }
 }
-
- 
-        
+#showUrlContent{
+    display: block;
+}
+#url_content{
+    height: 40px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+#url_content.active_1{
+    height: auto;
+}
+#editTags{
+    background: white;
+    display: block;
+    text-align: center;
+}
+/******** add style Tags**********/
+.tags {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: .909;
+    letter-spacing: .5px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    line-height: 16px;
+    letter-spacing: .08em;
+}
+.tags a {
+    color: #000000;
+    margin-right: 8px;
+    border: 1px solid #fedc87;
+    border-radius: 6px;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    line-height: 16px;
+    transition: all .3s;
+}
+.tags a:hover { border: 1px solid #e2e2e2; color: #ccc; }
+#login{
+    margin-top: 150px;
+}
+#login .form-control{
+    height: auto;
+    padding: 0;
+}

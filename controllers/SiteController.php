@@ -26,6 +26,7 @@ use app\models\SignupForm;
 use app\models\PHPMailer;
 use app\models\OtherFunctions;
 use app\models\TracknumbersSearch;
+use app\models\UrlContent;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -1549,6 +1550,38 @@ class SiteController extends Controller
         } else {
             return $this->redirect(Yii::$app->params['redirectUserAutorizationUrl']);
         }
+    }
+
+    public function actionLogin(){
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        } else {
+            $model->password = '';
+
+            return $this->render('login', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    public function actionUrlcontent(){
+        $url = $_POST['UrlContent']['url'];
+        $model = UrlContent::findOne(['url' => $url, 'website' => 2]);
+        if (!$model){
+            $model = new UrlContent();
+            $model->url = $_POST['UrlContent']['url'];
+            $model->website = 2;
+        }
+        $model->content = $_POST['UrlContent']['content'];
+        $model->before_content = $_POST['UrlContent']['before_content'] ?: null;
+        $model->after_content = $_POST['UrlContent']['after_content'] ?: null;
+        $model->save();
+        return $this->redirect($url);
     }
 
 }
