@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+.rating {
+    display: flex;
+}
+.rating-item {
+    font-size: 30px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.rating-item.active {
+    color: yellow;
+}
+.services_block__text{
+    margin-top: 10px;
+}
+.line{
+    margin-top: 10px;
+}

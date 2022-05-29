@@ -1,0 +1,9 @@
+[v-cloak] .v-cloak--hidden{
+    display: none;
+}
+tr {
+    transition: height 1s;
+    -webkit-transition: height 1s; /* Safari and Chrome */
+    -moz-transition: height 1s; /* Firefox 4 */
+    -o-transition: height 1s; /* Opera */
+}

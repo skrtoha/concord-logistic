@@ -1,0 +1,10 @@
+RewriteEngine on
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#RewriteRule (.*) https://www.concord-logistic.com/$1 [R=301,L]
+RewriteRule ^(.+)?$ /web/$1
+
+
+

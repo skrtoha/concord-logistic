@@ -1,0 +1,135 @@
+
+.form{
+    width: auto;
+   padding: 50px;
+     border: 1px solid #DCDCDC;
+    margin: 30px auto;
+    border-radius: 5px;
+    padding-top: 20px; 
+    background: #DCDCDC;
+    /*opacity: 0.8;*/
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.logist{
+    text-align: center;
+}
+.form-title{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+#from, #to, #air{
+    height: 32px;
+    border-radius: 3px;
+    text-align: center;
+    width: 32%;
+    font-size: 14px;
+}
+#text{
+    width:97%;
+    border-radius: 3px;
+   border: 1px solid #DCDCDC;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+.short, #cm{
+    width:17.8%;
+    height: 35px;
+     margin: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+input, #cm, #air{
+    border-radius: 3px;
+    border: 1px solid #DCDCDC;
+    text-align: center;
+    font-size: 15px;
+}
+#name, #phon, #mail{
+    width: 32%;
+    padding: 5px;
+}
+.btn{
+    margin-top: 20px;
+    /*width: 30%;*/
+    border: 1px solid #DCDCDC;
+    background: #ffda31;
+     color: black;
+        font-weight: bold;
+   
+}
+.btn-primary:hover{
+    background-color:#ceaf23;
+    border-color:#a38500;
+}
+.quick_calculation{
+   margin-top: 50px; 
+    font-size: 30px;
+ font-weight: bold;
+    color: white; 
+}
+.quick_credits{
+  color: white;
+  font-size: 16px;
+    line-height: 18px;
+}
+#name, #phon, #mail, #from, #to,  #text, #width, #lenght, #hei, #weight, #air, #cm{
+    border: 2px solid #696969;
+    color: black;
+    font-weight: bold
+}
+#calculation{
+     background: url("/img/truck.png")no-repeat center top;
+background-size:cover;
+}
+@media screen and (max-width:480px){
+    .form{
+        width: auto;
+        padding: 0;
+    } 
+}
+@media screen and (max-width:414px){
+    .form{
+        width: auto;
+        padding: 0;
+    }
+    table {
+        width: 100%;/* растягиваем на всю ширину */
+        font-size: 50%;
+    }
+    .logist {
+        display: block;
+        width: 100%;
+        margin: 8px;
+    }
+    #air, #cm{
+        width: 90%;
+    }
+    #name, #phon, #mail, #from, #to,  #text, #width, #lenght, #hei, #weight{
+        width: 90%;
+        margin: 2px;
+        
+    }
+    
+    .form-title{
+       text-align: center;
+       padding: 0px;
+    }
+    .btn{
+        /*width: 90%;
+        height: 40px;*/
+        background: #ffda31;
+       
+        
+    }
+     .quick_calculation {
+         font-size: 18px;
+     }
+    .quick_credits{
+         font-size: 13px;
+     }
+}
