@@ -4,9 +4,9 @@ use app\components\FormcalcWidget;
 use app\components\ObsvWidget;
 use http\Url;
 
-$this->title = 'Доставка грузов из США в Россию. Надежно, быстро, недорого';
+$this->title = 'Доставка из США в Россию – Покупка и доставка товаров из Америки | Международные отправки с Concord Logistic';
 $this->registerMetaTag(
-    ['name' => 'description', 'content' => 'Доставка товаров из США,  авиа и морские контейнерные перевозки из любой точки Америки,  Собственные склады в США. Услуги по консолидации, хранению и переупаковке грузов. Работаем как с крупными предприятиями, так и с представителями малого бизнеса.']
+    ['name' => 'description', 'content' => 'Доставка из США. Покупка и доставка товаров авиа и морские контейнерные перевозки из любой точки Америки. Собственные склады в США. Услуги по консолидации, хранению и переупаковке грузов. Работаем как с крупными предприятиями, так и с представителями малого бизнеса.']
 );
 $this->registerLinkTag(['rel' => 'canonical', 'href' => 'https://www.concord-logistic.com']);
 /*$this->registerMetaTag(
@@ -18,13 +18,10 @@ $this->registerLinkTag(['rel' => 'canonical', 'href' => 'https://www.concord-log
         <div class="row">
             <div class="col-lg-12">
                 <div class="">
-                    <h1 class="services_title" style="font-weight: bold;font-size: 60px;">
-                        Доставка товаров из США в Россию
-                    </h1>
-
+                    <h1 class="services_title" style="font-weight: bold;font-size: 60px;"> Доставка из США</h1>
                     <p class="services_block__text">
-                        Соединённые Штаты Америки - одна из крупнейших экономик в мире. Ежедневно происходит многомиллионный товарооборот. Основными путями отправки грузов из США являются Морские контейнерные перевозки и авиаперевозки, которые востребованы для срочных доставок. Сроки доставки авиа из США от 7 до 14 дней, доставка морем 30-40 дней.</p>
-                    <p class="services_block__text">Заказчиками сервиса по доставке из США могут быть не только крупные компании, но и небольшие ООО и ИП. Наша компания осуществляет отправку сборных и генеральных грузов и посылок из США в любую точку России. Доставка “под ключ” - на данный момент востребованной услугой для данных клиентов</p>
+                        Посылками из США уже никого не удивить. Уже каждый второй заказывает себе различные товары из заграницы. Купить можно практически все – косметика, непортящиеся продукты, одежда, автомобильные запчасти и многое другое. Благодаря доступной и быстрой интернет-связи, ваш ассортимент не ограничивается местным торговым центром или рынком, перед вами весь мир качественных брендовых товаров, большая часть которых производится в США.
+                    </p>
                 </div>
             </div>
 
@@ -393,33 +390,25 @@ $this->registerLinkTag(['rel' => 'canonical', 'href' => 'https://www.concord-log
             <div class="col-lg-6 col-md-6">
                 <div class="question_content animated mov">
                     <div class="services_block__item">
-
-                        <div id="question_images">
-
-                            06
-                        </div>
-                        <div class="nov">
-                            ноя
-                        </div>
+                        <div id="question_images">27</div>
+                        <div class="nov">мар</div>
                     </div>
                     <div class="question_block">
                         <h3 class="services_block__title ">
-                            Как быстро я смогу получить расчет стоимости перевозки?
+                            Наша компания занимается дизайном интерьеров, возможно ли через вас доставлять крупногабаритные предметы мебели – шкафы, стенки?
                         </h3>
-
                         <p class="services_block__text">
-                            Как правило, наши специалисты дают ответ в течение 1
-                            часа после отправки on-line запроса. Все зависит от сложности задачи и от
-                            того, насколько детально вы описываете вашу потребность и груз.
+                            Да, вы можете заказать у нас доставку крупногабаритных предметов – в случае, если авиадоставка из США будет невозможна, мы предложим вам доставку морем.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
-                <div class="question_content  animated mov2">
+                <div class="question_content  ">
                     <div class="services_block__item">
 
                         <div id="question_images">
+
                             17
                         </div>
                         <div class="nov">
@@ -427,17 +416,62 @@ $this->registerLinkTag(['rel' => 'canonical', 'href' => 'https://www.concord-log
                         </div>
                     </div>
                     <div class="question_block">
-                        <h3 class="services_block__title ">
-                            Занимаетесь ли вы доставкой автомобилей под заказ из Америки?
+                        <h3 class =" question_block__title">
+                            Занимаетесь ли вы доставкой автомобилей <br>    под заказ из Америки?
                         </h3>
 
                         <p class="services_block__text">
-                            Нет, наша компания не оказывает услуг по доставке новых или
-                            подержанных автомобилей из США.
+                            Нет, наша компания не оказывает услуг по доставке новых или подержанных автомобилей из США.
                         </p>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="question_content  ">
+                    <div class="services_block__item">
+
+                        <div id="question_images">
+
+                            12
+                        </div>
+                        <div class="nov">
+                            авг
+                        </div>
+                    </div>
+                    <div class="question_block">
+                        <h3 class =" question_block__title">
+                            Вы работаете с частными лицами? <br> Можно заказать доставку посылки из Американского интернет-магазина?
+                        </h3>
+
+                        <p class="services_block__text">
+                            Нет, наша компания работает только с юридическими лицами.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="question_content  ">
+                    <div class="services_block__item">
+
+                        <div id="question_images">
+                            30
+                        </div>
+                        <div class="nov">
+                            июль
+                        </div>
+                    </div>
+                    <div class="question_block">
+                        <h3 class =" question_block__title">
+                            Сколько по времени занимает доставка контейнера морем?
+                        </h3>
+
+                        <p class="services_block__text">
+                            Максимум 40-45 дней. Мы стремимся, по возможности, максимально сокращать сроки доставки.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div class="question_button">
                 <a href="/question.php">
                     <button id="quest_view">Смотреть все +</button>

@@ -65,6 +65,22 @@ $this->registerMetaTag(
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
+                <div class="question_content animated mov">
+                    <div class="services_block__item">
+                        <div id="question_images">27</div>
+                        <div class="nov">мар</div>
+                    </div>
+                    <div class="question_block">
+                        <h3 class="services_block__title ">
+                            Наша компания занимается дизайном интерьеров, возможно ли через вас доставлять крупногабаритные предметы мебели – шкафы, стенки?
+                        </h3>
+                        <p class="services_block__text">
+                            Да, вы можете заказать у нас доставку крупногабаритных предметов – в случае, если авиадоставка из США будет невозможна, мы предложим вам доставку морем.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
                 <div class="question_content  ">
                     <div class="services_block__item">
 

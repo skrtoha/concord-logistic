@@ -311,7 +311,7 @@ body {
 
 .services_block__title {
     font-size: 25px;
-    height: 80px;
+    /*height: 80px;*/
 }
 
 .services_block__text {
