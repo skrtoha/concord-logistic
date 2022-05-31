@@ -1,0 +1,199 @@
+[29-May-2022 07:41:06 America/Denver] An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: /home/concordp/public_html/concord-logistic/web/assets' in /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/AssetManager.php:213
+Stack trace:
+#0 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\BaseObject->__construct(Array)
+#2 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/di/Container.php(392): ReflectionClass->newInstanceArgs(Array)
+#3 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/di/Container.php(159): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/BaseYii.php(351): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#6 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('assetManager', true)
+#7 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Application.php(608): yii\base\Module->get('assetManager')
+#8 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/View.php(226): yii\base\Application->getAssetManager()
+#9 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/View.php(286): yii\web\View->getAssetManager()
+#10 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('app\\assets\\MyCl...')
+#11 /home/concordp/public_html/concord-logistic/views/layouts/main-uikit.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#12 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/View.php(348): require('/home/concordp/...')
+#13 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/concordp/...', Array)
+#14 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home/concordp/...', Array, Object(app\controllers\SiteController))
+#15 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="sit...')
+#16 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#17 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#18 [internal function]: yii\web\ErrorAction->run()
+#19 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#20 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#21 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#22 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#23 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#24 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#25 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "favicon.ico".' in /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/concordp/public_html/concord-logistic/web/index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/concordp/public_html/concord-logistic/web/index.php(13): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/jdk/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/X11R6/bin:/usr/local/bin:/usr/X11R6/bin:/root/bin:/opt/bin',
+    'TZ' => 'UTC',
+    'SCRIPT_NAME' => '/web/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/index.php',
+    'REMOTE_PORT' => '49334',
+    'SCRIPT_FILENAME' => '/home/concordp/public_html/concord-logistic/web/index.php',
+    'SERVER_ADMIN' => 'webmaster@concord-logistic.concord-parts.com',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/concordp/public_html/concord-logistic',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'https',
+    'DOCUMENT_ROOT' => '/home/concordp/public_html/concord-logistic',
+    'REMOTE_ADDR' => '192.121.87.80',
+    'SERVER_PORT' => '443',
+    'SERVER_ADDR' => '162.144.61.138',
+    'SERVER_NAME' => 'www.concord-logistic.com',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_SIGNATURE' => '',
+    'HTTP_COOKIE' => '_ga=GA1.2.1351644452.1653821136; _gid=GA1.2.1948079214.1653821136; _ym_uid=1653828061617075437; _ym_d=1653828061; _ym_isad=2; supportOnlineTalkID=hCDSV9uOA4IKgg6M3gVnShTov9SLuJH3',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-UA,ru;q=0.9,en-GB;q=0.8,en;q=0.7,ru-RU;q=0.6,en-US;q=0.5',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_REFERER' => 'https://www.concord-logistic.com/',
+    'HTTP_SEC_FETCH_DEST' => 'image',
+    'HTTP_SEC_FETCH_MODE' => 'no-cors',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.62 Safari/537.36',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_DNT' => '1',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'www.concord-logistic.com',
+    'SSL_TLS_SNI' => 'www.concord-logistic.com',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'YpN38oImGfQI9uPyWxOGrgAAAAs',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_SSL_TLS_SNI' => 'www.concord-logistic.com',
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'YpN38oImGfQI9uPyWxOGrgAAAAs',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_REDIRECT_SSL_TLS_SNI' => 'www.concord-logistic.com',
+    'REDIRECT_REDIRECT_HTTPS' => 'on',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'YpN38oImGfQI9uPyWxOGrgAAAAs',
+    'REDIRECT_REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_REDIRECT_REDIRECT_SSL_TLS_SNI' => 'www.concord-logistic.com',
+    'REDIRECT_REDIRECT_REDIRECT_HTTPS' => 'on',
+    'REDIRECT_REDIRECT_REDIRECT_UNIQUE_ID' => 'YpN38oImGfQI9uPyWxOGrgAAAAs',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1653831666.85863208770751953125,
+    'REQUEST_TIME' => 1653831666,
+    'argv' => [],
+    'argc' => 0,
+]
+[29-May-2022 07:41:41 America/Denver] An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /home/concordp/public_html/concord-logistic/web/assets' in /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/AssetManager.php:459
+Stack trace:
+#0 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/AssetBundle.php(185): yii\web\AssetManager->publish('/home/concordp/...', Array)
+#1 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle('yii\\web\\JqueryA...', Array, true)
+#3 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/View.php(287): yii\web\AssetManager->getBundle('yii\\web\\JqueryA...')
+#4 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle('yii\\web\\JqueryA...', 1)
+#5 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('app\\assets\\MyCl...')
+#6 /home/concordp/public_html/concord-logistic/views/layouts/main-uikit.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/View.php(348): require('/home/concordp/...')
+#8 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/concordp/...', Array)
+#9 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home/concordp/...', Array, Object(app\controllers\SiteController))
+#10 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="sit...')
+#11 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#12 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#13 [internal function]: yii\web\ErrorAction->run()
+#14 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#15 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#16 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#17 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#18 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#19 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#20 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "favicon.ico".' in /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/concordp/public_html/concord-logistic/web/index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/concordp/public_html/concord-logistic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/concordp/public_html/concord-logistic/web/index.php(13): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/jdk/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/X11R6/bin:/usr/local/bin:/usr/X11R6/bin:/root/bin:/opt/bin',
+    'TZ' => 'UTC',
+    'SCRIPT_NAME' => '/web/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/index.php',
+    'REMOTE_PORT' => '49339',
+    'SCRIPT_FILENAME' => '/home/concordp/public_html/concord-logistic/web/index.php',
+    'SERVER_ADMIN' => 'webmaster@concord-logistic.concord-parts.com',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/concordp/public_html/concord-logistic',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'https',
+    'DOCUMENT_ROOT' => '/home/concordp/public_html/concord-logistic',
+    'REMOTE_ADDR' => '192.121.87.80',
+    'SERVER_PORT' => '443',
+    'SERVER_ADDR' => '162.144.61.138',
+    'SERVER_NAME' => 'www.concord-logistic.com',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_SIGNATURE' => '',
+    'HTTP_COOKIE' => '_ga=GA1.2.1351644452.1653821136; _gid=GA1.2.1948079214.1653821136; _ym_uid=1653828061617075437; _ym_d=1653828061; _ym_isad=2; supportOnlineTalkID=hCDSV9uOA4IKgg6M3gVnShTov9SLuJH3',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-UA,ru;q=0.9,en-GB;q=0.8,en;q=0.7,ru-RU;q=0.6,en-US;q=0.5',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_REFERER' => 'https://www.concord-logistic.com/',
+    'HTTP_SEC_FETCH_DEST' => 'image',
+    'HTTP_SEC_FETCH_MODE' => 'no-cors',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.62 Safari/537.36',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_DNT' => '1',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'www.concord-logistic.com',
+    'SSL_TLS_SNI' => 'www.concord-logistic.com',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'YpN4FcqVAGuSmhnTm1uIHwAAAI0',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_SSL_TLS_SNI' => 'www.concord-logistic.com',
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'YpN4FcqVAGuSmhnTm1uIHwAAAI0',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_REDIRECT_SSL_TLS_SNI' => 'www.concord-logistic.com',
+    'REDIRECT_REDIRECT_HTTPS' => 'on',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'YpN4FcqVAGuSmhnTm1uIHwAAAI0',
+    'REDIRECT_REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_REDIRECT_REDIRECT_SSL_TLS_SNI' => 'www.concord-logistic.com',
+    'REDIRECT_REDIRECT_REDIRECT_HTTPS' => 'on',
+    'REDIRECT_REDIRECT_REDIRECT_UNIQUE_ID' => 'YpN4FcqVAGuSmhnTm1uIHwAAAI0',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1653831701.9220159053802490234375,
+    'REQUEST_TIME' => 1653831701,
+    'argv' => [],
+    'argc' => 0,
+]
